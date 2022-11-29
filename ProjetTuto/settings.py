@@ -90,7 +90,7 @@ WSGI_APPLICATION = "ProjetTuto.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'PostgreSQL', 
+        'NAME': 'railway', 
         'USER': 'postgres',
         'PASSWORD': 's5vBFcLy6Bex5GgBdrxS',
         'HOST': 'containers-us-west-58.railway.app', 
