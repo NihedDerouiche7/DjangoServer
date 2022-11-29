@@ -8,8 +8,8 @@ from django.utils.timezone import now
 
 class Input(models.Model):
     created_at = models.DateTimeField(auto_now_add=True,blank=True)
-    X = models.CharField(max_length=50)
-    Y = models.CharField(max_length=50)
+    X = models.CharField(max_length=5000)
+    Y = models.CharField(max_length=5000)
     nbr_pas = models.IntegerField(max_length=50)
     def __int__(self):
         return self.id
