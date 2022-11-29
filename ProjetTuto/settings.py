@@ -90,16 +90,20 @@ WSGI_APPLICATION = "ProjetTuto.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'railway', 
+#         'USER': 'postgres',
+#         'PASSWORD': 's5vBFcLy6Bex5GgBdrxS',
+#         'HOST': 'containers-us-west-58.railway.app', 
+#         'PORT': '7448',
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'railway', 
-        'USER': 'postgres',
-        'PASSWORD': 's5vBFcLy6Bex5GgBdrxS',
-        'HOST': 'containers-us-west-58.railway.app', 
-        'PORT': '7448',
-    }
-}
+    'default':
+    dj_database_url.config(default=os.getenv('DATABASE_URL'),
+                           conn_max_age=1800)}
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
