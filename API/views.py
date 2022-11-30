@@ -89,7 +89,7 @@ class InputView(APIView):
             degrees_final = 360 + degrees_temp
         else:
             degrees_final = degrees_temp
-        compass_brackets = ["UP", "UP/RIGHT", "RIGHT", "DOWN/RIGHT", "DOWN", "DOWN/LEFT", "LEFT", "UP/LEFT", "UP"]
+        compass_brackets = ["DOwn", "DOWN/RIGHT", "RIGHT", "UP/RIGHT", "UP", "UP/LEFT", "LEFT", "DOWN/LEFT", "DOWN"]
         compass_lookup = round(degrees_final / 45)
         return compass_brackets[compass_lookup]    
         

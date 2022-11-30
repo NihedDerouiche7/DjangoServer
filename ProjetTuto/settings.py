@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-g4-)9wzp!^bfyvb%@z7nu1su#u=fgrg=49kksig8n35o34-&^v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = ['djangoserver-production.up.railway.app']
+ALLOWED_HOSTS = ['djangoserver-production.up.railway.app','127.0.0.1']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
@@ -100,10 +100,10 @@ WSGI_APPLICATION = "ProjetTuto.wsgi.application"
 #         'PORT': '7448',
 #     }
 # }
-DATABASES = {
-    'default':
-    dj_database_url.config(default=os.getenv('DATABASE_URL'),
-                           conn_max_age=1800)}
+# DATABASES = {
+#     'default':
+#     dj_database_url.config(default=os.getenv('DATABASE_URL'),
+#                            conn_max_age=1800)}
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
